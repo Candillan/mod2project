@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   #Reviews Routes
   #root route currently goes to the reviews controller
-  get '/', to: "reviews#index"
+  #get '/', to: "reviews#index"
   get '/reviews', to: "reviews#index", as: "reviews"
   get '/reviews/new', to: "reviews#new", as: "new_review"
   get '/reviews/:id', to: "reviews#show", as: "review"
@@ -41,5 +41,10 @@ Rails.application.routes.draw do
   get '/developers/:id/edit', to: "developers#edit", as: "edit_developer"
   patch '/developers/:id', to: "developers#update"
   delete '/developers/:id', to: "developers#delete"
+
+  #Sessions Routes
+  get '/login', to: "sessions#new", as: "login"
+  post '/login', to: "sessions#create"
+  get '/logout', to: "sessions#destroy"
 
 end
