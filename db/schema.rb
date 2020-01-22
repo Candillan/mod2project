@@ -13,7 +13,8 @@
 ActiveRecord::Schema.define(version: 6) do
 
   create_table "developers", force: :cascade do |t|
-    t.string "name"
+    t.string "username"
+    t.string "password"
     t.integer "age"
     t.integer "experience"
     t.string "studio"

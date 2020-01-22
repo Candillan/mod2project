@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   delete '/reviews/:id', to: "reviews#destroy"
   
   
-  
   #Users Routes
   get '/users', to: "users#index", as: "users"
   get '/users/new', to: "users#new", as: "new_user"
@@ -33,5 +32,14 @@ Rails.application.routes.draw do
   patch '/games/:id', to: "games#update"
   delete '/games/:id', to: "games#delete"
 
+
+  #Developers Routes
+  get '/developers', to: "developers#index", as: "developers"
+  get '/developers/new', to: "developers#new", as: "new_developer"
+  get '/developers/:id', to: "developers#show", as: "developer"
+  post '/developers', to: "developers#create"
+  get '/developers/:id/edit', to: "developers#edit", as: "edit_developer"
+  patch '/developers/:id', to: "developers#update"
+  delete '/developers/:id', to: "developers#delete"
 
 end
