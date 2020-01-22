@@ -15,7 +15,7 @@
 
 
     <% if critic_review_scores.count == 0 && review_scores.count == 0 %>
-       Overall Rating: 0
+       Overall Rating: 0.round(2)
     <% end %>
     <% if critic_review_scores.count == 0 %>
        Overall Rating: <%= ((review_scores.sum)/(review_scores.count)).round(2) %>/10
@@ -24,7 +24,7 @@
        Overall Rating: <%= ((critic_review_scores.sum)/(critic_review_scores.count)).round(2) %>/10
     <% end %>
     <% if critic_review_scores.count != 0 && review_scores.count != 0 %>
-        Overall Rating: <%= ((((critic_review_scores.sum)/(critic_review_scores.count))*0.65).round(2) + (((review_scores.sum)/(review_scores.count))*0.35).round(2)).to_s %>/10
+        Overall Rating: <%= ((((critic_review_scores.sum)/(critic_review_scores.count))*0.65).round(2) + (((review_scores.sum)/(review_scores.count))*0.35).round(2)).round(2) %>/10
     <% end %>
 
 <ul>
