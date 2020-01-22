@@ -31,13 +31,13 @@ user10 = User.create(username: "Ian", password: "123", critic: 1)
 
 ### Developer Seeds ###
 
-developer1 = Developer.create(name: "Tom", age: 34, experience: 7, studio: "Bethesda")
-developer2 = Developer.create(name: "Bob", age: 30, experience: 4, studio: "Ensemble Studios")
-developer3 = Developer.create(name: "Sally", age: 27, experience: 3, studio: "Nintendo Studios")
-developer4 = Developer.create(name: "Susie", age: 28, experience: 2, studio: "Firaxis Games")
-developer5 = Developer.create(name: "Tim", age: 31, experience: 5, studio: "Gearbox Software")
-developer6 = Developer.create(name: "John", age: 39, experience: 7, studio: "Blizzard Entertainment")
-developer7 = Developer.create(name: "David", age: 33, experience: 4, studio: "Guerilla Games")
+developer1 = Developer.create(username: "Tom", age: 34, experience: 7, studio: "Bethesda")
+developer2 = Developer.create(username: "Bob", age: 30, experience: 4, studio: "Ensemble Studios")
+developer3 = Developer.create(username: "Sally", age: 27, experience: 3, studio: "Nintendo Studios")
+developer4 = Developer.create(username: "Susie", age: 28, experience: 2, studio: "Firaxis Games")
+developer5 = Developer.create(username: "Tim", age: 31, experience: 5, studio: "Gearbox Software")
+developer6 = Developer.create(username: "John", age: 39, experience: 7, studio: "Blizzard Entertainment")
+developer7 = Developer.create(username: "David", age: 33, experience: 4, studio: "Guerilla Games")
 
 
 ### Game Seeds ###
