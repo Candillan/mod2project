@@ -1,0 +1,24 @@
+<h1>Edit your information here</h1>
+
+<% if flash[:errors] %>
+<% flash[:errors].each do |error| %>
+<p><%= error %></p>
+<% end %>
+<% end %>
+
+<%= form_for @developer do |f| %>
+<p><%= f.label :username %>
+<%= f.text_field :username %></p>
+<p><%= f.label :password %>
+<%= f.text_field :password %></p>
+<p><%= f.label :age %>:
+<%= f.number_field :age %></p>
+<p><%= f.label :studio %>:
+<%= f.text_field :studio %></p>
+<p><%= f.label :experience %> (in years):
+<%= f.number_field :experience %></p>
+<%= f.submit %>
+<% end %>
+
+<br>
+<%= link_to "Cancel Action", developer_path(@developer) %>

@@ -1,6 +1,7 @@
 <h1>Game Page: <%= @game.name %></h1>
 <p>Release Year: <%= @game.year %></p>
 <p>Description: <%= @game.description %></p>
+<p>Developed by: <%= link_to @developer.username, developer_path(@developer) %></p>
 
 <% review_scores = [] %>
 <% critic_review_scores = [] %>
@@ -31,7 +32,7 @@
     <% @game.reviews.each do |review| %>
         <% if review.user.critic %>
         <li>
-          Critic Review: <strong><%= link_to review.title, review_path(review) %></strong>  <%= review.rating %>/10, by <%= review.user.username %> at <%= review.created_at %>
+          <strong><%= link_to review.title, review_path(review) %></strong>  <%= review.rating %>/10, by <%= review.user.username %> at <%= review.created_at %> <strong> -- ⭐️Critic Review ⭐️</strong> 
         </li>
         <% else %>
         <li>
