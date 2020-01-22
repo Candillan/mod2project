@@ -1,0 +1,15 @@
+<h1>Developer: <%= @developer.username %></h1>
+<h2>Age: <%= @developer.age %></h2>
+<h2>Studio: <%= @developer.studio %></h2>
+<h2>Experience: <%= @developer.experience %> years</h2>
+
+Games Developed: 
+<ul>
+    <% @games.select do |game| %>
+        <li>
+            <%= link_to game.name, game_path(game) %>
+        </li>
+    <% end %>
+</ul>
+<br>
+<%= link_to "All Developers", developers_path %>
