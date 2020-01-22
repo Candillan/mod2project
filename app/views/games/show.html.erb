@@ -1,0 +1,15 @@
+<h1>Game Page: <%= @game.name %></h1>
+<p>Release Year: <%= @game.year %></p>
+<p>Description: <%= @game.description %></p>
+
+Reviews: 
+<ul>
+    <% @game.reviews.each do |review| %>
+        <li>
+            <strong><%= link_to review.title, review_path(review) %></strong>  <%= review.rating %>/10, by <%= review.user.username %> at <%= review.created_at %>
+        </li>
+    <% end %>
+</ul>
+
+
+<%= link_to "All Games", games_path %>

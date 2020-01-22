@@ -1,0 +1,17 @@
+<h1>Add A New Review</h1>
+<% if flash[:errors] %>
+<% flash[:errors].each do |error| %>
+<p><%= error %></p>
+<% end %>
+<% end %>
+<%= form_for @review do |f| %>
+<p><%= f.label "Available Games to Review:" %>
+<%= f.collection_select :game_id, @games, :id, :name %></p>
+<p><%= f.label "Rating:" %>
+<%= f.number_field :rating %></p>
+<p><%= f.label "Review Title:" %>
+<%= f.text_field :title %></p>
+<p><%= f.label "Content:" %>
+<%= f.text_area :content %></p>
+<%= f.submit %>
+<% end %>

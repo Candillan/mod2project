@@ -1,0 +1,9 @@
+<h1>Review: <%= link_to @review.game.name, game_path(@review.game) %></h1>
+<h2>Title: <%= @review.title %> </h2>
+<p><strong>Rating: </strong><%= @review.rating %>/10</p>
+<%if @review.content != "" %>
+    <p><strong>Content: </strong><%= @review.content %></p>
+<% end %>
+<p><strong>Posted By: </strong><%= link_to @review.user.username, user_path(@review.user) %></p>
+
+<%= link_to "All Games", games_path %>

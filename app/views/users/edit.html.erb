@@ -1,0 +1,18 @@
+<h1>Edit your information here</h1>
+
+<% if flash[:errors] %>
+<% flash[:errors].each do |error| %>
+<p><%= error %></p>
+<% end %>
+<% end %>
+
+<%= form_for @user do |f| %>
+<p><%= f.label :username %>
+<%= f.text_field :username %></p>
+<p><%= f.label :password %>
+<%= f.text_field :password %></p>
+<%= f.submit %>
+<% end %>
+
+<br>
+<%= link_to "Cancel Action", user_path(@user) %>

@@ -1,24 +1,32 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Module-2-Project-ToDo
 
-Things you may want to cover:
+# Goals
+- Create the project
+- Come up with a name
 
-* Ruby version
 
-* System dependencies
+# Create Databases
+- Databases are Developers, Users, Critics (users can toggle critic option?), Reviews (joiner), and Games
 
-* Configuration
+# Developers
+- Has Name, Studio Name (potential model?), Age, Experience
+- Creates new Games, has studio(?)
 
-* Database creation
+# User
+- Has Name, Age, Favorite Genre, Avatar (based on URL)
+- Make Reviews of Games, Edit Reviews/Ratings, Delete Profile(???), Changing Password(??????), Showing Critics they follow
 
-* Database initialization
+# Critic?
+- Has everything a User has, also has Follower count and Reviews are weighted more heavily (65:35)
 
-* How to run the test suite
+# Likes
+- Would keep track of/handle Followers?
 
-* Services (job queues, cache servers, search engines, etc.)
+# Game
+- Is made by Studio/Developer, has Title, Genre, Price?, Image, Release Date
+- Display Games by Genre, Display average Rating
 
-* Deployment instructions
-
-* ...
+# Review
+- Is made by User/Critic about a Game, has Rating, Content, Review Title (critic boolean)
+- Critic Reviews listed on top, tagged as Critic Reviews
