@@ -6,4 +6,8 @@
 <% end %>
 <p><strong>Posted By: </strong><%= link_to @review.user.username, user_path(@review.user) %></p>
 
-<%= link_to "All Games", games_path %>
+
+<br>
+<p><%= link_to "Edit Review", edit_review_path(@review) %><p>
+
+<p><%= link_to "All Games", games_path %><p>

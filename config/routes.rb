@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/reviews/new', to: "reviews#new", as: "new_review"
   get '/reviews/:id', to: "reviews#show", as: "review"
   post '/reviews', to: "reviews#create"
-  get '/reviews/:id/edit', to: "reviews#edit"
+  get '/reviews/:id/edit', to: "reviews#edit", as: "edit_review"
   patch '/reviews/:id', to: "reviews#update"
   delete '/reviews/:id', to: "reviews#destroy"
   

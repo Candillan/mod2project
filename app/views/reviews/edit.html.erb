@@ -1,0 +1,19 @@
+<h1>Edit Your Review for <%= @review.game.name %></h1> 
+
+<% if flash[:errors] %>
+<% flash[:errors].each do |error| %>
+<p><%= error %></p>
+<% end %>
+<% end %>
+
+<%= form_for @review do |f| %>
+<p><%= f.label "Rating:" %>
+<%= f.number_field :rating %></p>
+<p><%= f.label "Review Title:" %>
+<%= f.text_field :title %></p>
+<p><%= f.label "Content:" %>
+<%= f.text_area :content %></p>
+<%= f.submit %>
+<% end %>
+<br>
+<%= link_to "Cancel Edit", review_path(@review) %>
