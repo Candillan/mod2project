@@ -4,8 +4,12 @@
 <%if @review.content != "" %>
     <p><strong>Content: </strong><%= @review.content %></p>
 <% end %>
-<p><strong>Posted By: </strong><%= link_to @review.user.username, user_path(@review.user) %></p>
-
+<p><strong>Posted By: </strong>
+    <% if @review.user.critic %>
+<%= link_to @review.user.username, user_path(@review.user) %> - Critic
+    <% else %>
+    <%= link_to @review.user.username, user_path(@review.user) %> </p>
+    <% end %>
 
 <br>
 <p><%= link_to "All Games", games_path %><p>

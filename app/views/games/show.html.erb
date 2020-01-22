@@ -29,9 +29,15 @@
 
 <ul>
     <% @game.reviews.each do |review| %>
+        <% if review.user.critic %>
         <li>
-            <strong><%= link_to review.title, review_path(review) %></strong>  <%= review.rating %>/10, by <%= review.user.username %> at <%= review.created_at %>
+          Critic Review: <strong><%= link_to review.title, review_path(review) %></strong>  <%= review.rating %>/10, by <%= review.user.username %> at <%= review.created_at %>
         </li>
+        <% else %>
+        <li>
+        <strong><%= link_to review.title, review_path(review) %></strong>  <%= review.rating %>/10, by <%= review.user.username %> at <%= review.created_at %>
+        </li>
+        <% end %>
     <% end %>
 </ul>
 
