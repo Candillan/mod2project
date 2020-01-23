@@ -16,10 +16,10 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         @user.critic = false
         if @user.save
-            redirect_to user_path(@user)
+            flash.notice = "Please log in using your new credentials!"
+            redirect_to login_path
         else 
             flash[:errors] = @user.errors.full_messages
-            redirect_to new_user_path
         end 
     end
 

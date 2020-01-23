@@ -15,10 +15,10 @@ class DevelopersController < ApplicationController
     def create
         @developer = Developer.new(developer_params)
         if @developer.save
-            redirect_to developer_path(@developer)
+            flash.notice = "Please log in using your new credentials!"
+            redirect_to login_path
         else 
             flash[:errors] = @developer.errors.full_messages
-            redirect_to new_developer_path
         end 
     end
 
