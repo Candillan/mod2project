@@ -3,6 +3,56 @@ class GamesController < ApplicationController
         @games = Game.all 
     end
 
+    def b3show
+        @game = Game.find(1)
+        @developer = @game.developer 
+    end
+
+    def wowshow
+        @game = Game.find(2)
+        @developer = @game.developer 
+    end
+
+    def scshow
+        @game = Game.find(3)
+        @developer = @game.developer 
+    end
+
+    def aoeshow
+        @game = Game.find(4)
+        @developer = @game.developer 
+    end
+
+    def ssbshow
+        @game = Game.find(5)
+        @developer = @game.developer 
+    end
+
+    def civshow
+        @game = Game.find(6)
+        @developer = @game.developer 
+    end
+
+    def skyrimshow
+        @game = Game.find(7)
+        @developer = @game.developer 
+    end
+
+    def horizonshow
+        @game = Game.find(8)
+        @developer = @game.developer 
+    end
+
+    def morrowindshow
+        @game = Game.find(8)
+        @developer = @game.developer 
+    end
+
+    def oblivionshow
+        @game = Game.find(8)
+        @developer = @game.developer 
+    end
+
     def show
         @game = Game.find(params[:id])
         @developer = @game.developer

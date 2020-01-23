@@ -26,7 +26,18 @@ Rails.application.routes.draw do
   #Games Routes
   get '/games', to: "games#index", as: "games"
   get '/games/new', to: "games#new", as: "new_game"
+  get '/games/1', to: "games#b3show"
+  get '/games/2', to: "games#wowshow"
+  get '/games/3', to: "games#scshow"
+  get '/games/4', to: "games#aoeshow"
+  get '/games/5', to: "games#ssbshow"
+  get '/games/6', to: "games#civshow"
+  get '/games/7', to: "games#skyrimshow"
+  get '/games/8', to: "games#horizonshow"
+  get '/games/9', to: "games#morrowindshow"
+  get '/games/10', to: "games#oblivionshow"
   get '/games/:id', to: "games#show", as: "game"
+  
   post '/games', to: "games#create"
   get '/games/:id/edit', to: "games#edit", as: "edit_game"
   patch '/games/:id', to: "games#update"
