@@ -1,4 +1,6 @@
+
 <h1>Game Page: <%= @game.name %></h1>
+
 <p>Release Year: <%= @game.year %></p>
 <p>Description: <%= @game.description %></p>
 <p>Developed by: <%= link_to @developer.username, developer_path(@developer) %></p>
@@ -43,4 +45,7 @@
 </ul>
 
 
-<%= link_to "All Games", games_path %>
+
+<%= button_to "New Review", new_review_path, method: :get %><br>
+<%= button_to "All Games", games_path, method: :get %>
+

@@ -44,12 +44,12 @@ class GamesController < ApplicationController
     end
 
     def morrowindshow
-        @game = Game.find(8)
+        @game = Game.find(9)
         @developer = @game.developer 
     end
 
     def oblivionshow
-        @game = Game.find(8)
+        @game = Game.find(10)
         @developer = @game.developer 
     end
 
@@ -59,9 +59,13 @@ class GamesController < ApplicationController
     end
 
     def new
+        @game = Game.new(game_params(:name, :year, :description, :developer_id))
     end
 
     def create
+        @game = Game.new(game_params(:name, :year, :description, :developer_id))
+        @game.save
+        redirect_to game_path(@game)
     end
 
     def edit

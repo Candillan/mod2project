@@ -15,10 +15,9 @@ class ReviewsController < ApplicationController
 
     def create
         #random user ID for now - will want to use cookies to set the user id
-        id = User.all.sample.id
+        id = session[:user_id]
         @review = Review.new(review_params)
         @review.user_id = id
-        byebug
         if @review.save
             redirect_to review_path(@review)
         else
