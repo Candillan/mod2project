@@ -1,3 +1,13 @@
+<head>
+    <style>
+    body {
+        background: url(<%= asset_path 'games.jpg' %>) no-repeat center center;
+        background-size: cover;
+        }
+    </style>
+</head>
+
+
 <h1>Games Index</h1>
 <ul>
     <% @games.each do |game| %>
