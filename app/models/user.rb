@@ -7,4 +7,6 @@ class User < ApplicationRecord
     
     #may not want to have this validation in there during development
     #validates :password, length: { in: 6..15}
+
+    
 end
