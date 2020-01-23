@@ -10,10 +10,10 @@ Game.destroy_all
 Review.destroy_all
 Developer.destroy_all
 
-# User.reset_pk_sequence
-# Game.reset_pk_sequence
-# Review.reset_pk_sequence
-# Developer.reset_pk_sequence
+ User.reset_pk_sequence
+ Game.reset_pk_sequence
+ Review.reset_pk_sequence
+ Developer.reset_pk_sequence
 
 ### User Seeds ###
 
@@ -42,9 +42,9 @@ developer7 = Developer.create(username: "David", password: "123", age: 33, exper
 
 ### Game Seeds ###
 
-game1 = Game.create(name: "Borderlands 3", year: 2019, description: "Open-world shooter", developer_id: developer1.id)
+game1 = Game.create(name: "Borderlands 3", year: 2019, description: "Open-world shooter", developer_id: developer5.id)
 game2 = Game.create(name: "World of Warcraft", year: 2004, description: "Legendary time-sink", developer_id: developer6.id)
-game3 = Game.create(name: "Starcraft", year: 1996, description: "Sci-Fi RTS", developer_id: developer5.id)
+game3 = Game.create(name: "Starcraft", year: 1996, description: "Sci-Fi RTS", developer_id: developer6.id)
 game4 = Game.create(name: "Age of Empires II", year: 1999, description: "Classic historical RTS", developer_id: developer2.id)
 game5 = Game.create(name: "Super Smash Bros", year: 1999, description: "Battle royale", developer_id: developer3.id)
 game6 = Game.create(name: "Civilization VI", year: 2016, description: "Turn-based world domination", developer_id: developer4.id)

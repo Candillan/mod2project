@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 6) do
 
   create_table "developers", force: :cascade do |t|
     t.string "username"
-    t.string "password"
+    t.string "password_digest"
     t.integer "age"
     t.integer "experience"
     t.string "studio"
