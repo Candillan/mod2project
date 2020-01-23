@@ -6,6 +6,7 @@ class DevelopersController < ApplicationController
     def show
         @developer = Developer.find(params[:id])
         @games = @developer.games
+        byebug
     end
 
     def new
