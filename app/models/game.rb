@@ -22,7 +22,7 @@ class Game < ApplicationRecord
             my_arr = self.reviews.select do |review|
                 review.user.critic
             end
-            if my_arr.count < 0
+            if my_arr.count < 1
                 return nil
             else  
                 arr = my_arr.map do |review|
@@ -42,14 +42,14 @@ class Game < ApplicationRecord
                 !review.user.critic
             end 
             if my_arr.length > 0 
-            arr = my_arr.map do |review|
-                review.rating.to_f
-            end
-            sum_arr = arr.reduce do |n, sum|
-                n + sum
+                arr = my_arr.map do |review|
+                    review.rating.to_f
+                end
+                sum_arr = arr.reduce do |n, sum|
+                    n + sum
+                end 
+                (sum_arr / arr.count).round(2)
             end 
-            (sum_arr / arr.count).round(2)
-        end 
         end 
     end
 
