@@ -1,3 +1,7 @@
+<% if flash.notice %>
+<%= flash.notice %>
+<% end %>
+
 <h1>Developer: <%= @developer.username %></h1>
 <h2>Age: <%= @developer.age %></h2>
 <h2>Studio: <%= @developer.studio %></h2>
