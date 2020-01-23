@@ -63,8 +63,10 @@ class GamesController < ApplicationController
     end
 
     def create
+        id = session[:developer_id]
         @game = Game.new(game_params)
-        @game.developer_id = Developer.all.sample.id
+        #@game.developer_id = Developer.all.sample.id
+        @game.developer_id = id
         if @game.save
             redirect_to games_path
         else 
