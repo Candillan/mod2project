@@ -5,6 +5,9 @@
 <p>Description: <%= @game.description %></p>
 <p>Developed by: <%= link_to @developer.username, developer_path(@developer) %></p>
 
+
+    <% if @game.reviews.count > 0 %>
+
 <% review_scores = [] %>
 <% critic_review_scores = [] %>
 
@@ -18,7 +21,7 @@
 
 
     <% if critic_review_scores.count == 0 && review_scores.count == 0 %>
-       Overall Rating: 0.round(2)
+       Overall Rating: 0
     <% end %>
     <% if critic_review_scores.count == 0 %>
        Overall Rating: <%= ((review_scores.sum)/(review_scores.count)).round(2) %>/10
@@ -29,6 +32,11 @@
     <% if critic_review_scores.count != 0 && review_scores.count != 0 %>
         Overall Rating: <%= ((((critic_review_scores.sum)/(critic_review_scores.count))*0.65).round(2) + (((review_scores.sum)/(review_scores.count))*0.35).round(2)).round(2) %>/10
     <% end %>
+
+    <% else %>
+        Overall Rating: 0
+    <% end %>
+
 
 <ul>
     <% @game.reviews.each do |review| %>

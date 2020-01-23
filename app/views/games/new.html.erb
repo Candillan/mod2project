@@ -1,0 +1,19 @@
+<h1>Add Your Game to the Database</h1>
+
+<% if flash[:errors] %>
+<% flash[:errors].each do |error| %>
+<ul>
+<li><%= error %></li>
+</ul>
+<% end %>
+<% end %>
+
+<%= form_for @game do |f|  %>
+<p><%= f.label "Name:" %>
+<%= f.text_field :name %></p>
+<p><%= f.label "Release Year:" %>
+<%= f.number_field :year %></p>
+<p><%= f.label "Description:" %>
+<%= f.text_area :description %></p>
+<%= f.submit %>
+<% end  %>

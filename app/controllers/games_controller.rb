@@ -2,7 +2,7 @@ class GamesController < ApplicationController
     def index
         @games = Game.all 
     end
-
+ 
     def b3show
         @game = Game.find(1)
         @developer = @game.developer 
@@ -59,13 +59,18 @@ class GamesController < ApplicationController
     end
 
     def new
-        @game = Game.new(game_params(:name, :year, :description, :developer_id))
+        @game = Game.new
     end
 
     def create
-        @game = Game.new(game_params(:name, :year, :description, :developer_id))
-        @game.save
-        redirect_to game_path(@game)
+        @game = Game.new(game_params)
+        @game.developer_id = Developer.all.sample.id
+        if @game.save
+            redirect_to games_path
+        else 
+            flash[:errors] = @game.errors.full_messages
+            redirect_to new_game_path
+        end 
     end
 
     def edit
@@ -79,7 +84,7 @@ class GamesController < ApplicationController
 
     private 
 
-    def game_params(*args)
-        params.require(:game).permit(*args)
+    def game_params
+        params.require(:game).permit(:year, :developer_id, :description, :name)
     end
 end
