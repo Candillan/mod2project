@@ -8,7 +8,7 @@
 
 <h1>Analytics</h1>
 
-<h2>Game Data</h2>
+<h3>Game Data</h3>
 
 <p><strong>Total Number of Games: </strong><%= @games.total_games %></p>
 
@@ -17,19 +17,19 @@
 <p><strong>Most Reviewed Game: </strong><%= "#{@games.most_reviewed_game.name} - #{@games.most_reviewed_game.reviews.count} reviews" %></p>
 
 
-<h2>Review Data</h2>
+<h3>Review Data</h3>
 <p><strong>Total Number of Reviews: </strong><%= @reviews.all_reviews %></p>
 
 <p><strong>Average Review Rating: </strong><%= @reviews.average_review_rating_raw %></p>
 
-<h2>Developer Data</h2>
+<h3>Developer Data</h3>
 
 <p><strong>Total Number of Developers: </strong><%= @developers.total_devs %></p>
 <p><strong>Oldest Developer: </strong><%= @developers.oldest_dev.username %></p>
 <p><strong>Most Experienced Developer: </strong><%= "#{@developers.most_experienced_dev.username} - #{@developers.most_experienced_dev.experience} years" %></p>
 
 
-<h2>User Data</h2>
+<h3>User Data</h3>
 
 <p><strong>Total Number of Users: </strong><%= @users.total_users %></p>
 
@@ -37,10 +37,9 @@
 
 
 
-<h3><marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
+<marquee><h3><marquee direction="down" width="250" height="100" behavior="alternate" style="border:solid">
   <marquee behavior="alternate">
-    Happy Birthday Matt
+    🎉🥳Happy Birthday Matt🎂🧁
   </marquee>
-</marquee><h3>
-
-<h5>Calvin, Ben, Jake</h5>
+</marquee><h3></marquee>
+<div>Calvin, Ben, Jake</div>
