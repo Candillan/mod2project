@@ -27,10 +27,11 @@ class User < ApplicationRecord
     end 
 
     def self.harshest_critic
-        my_arr = User.all.sort do |user|
-                    user.average_review
-                end 
-        my_arr[-1]        
+        user = User.all.min_by do |user|
+             user.average_review
+        end 
+        
+        user      
     end 
 
     
