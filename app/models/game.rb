@@ -55,7 +55,7 @@ class Game < ApplicationRecord
 
     def weighted_review
         if !self.audience_review && !self.critic_review
-            return "This game has not been reviewed"
+            return 0
         elsif
             !self.audience_review && self.critic_review
             return self.critic_review

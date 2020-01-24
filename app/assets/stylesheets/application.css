@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ 
+ body{
+     height: 100vh; 
+     background-size: cover;
+     background-position: center;
+     background-image: linear-gradient(rgba(223, 223, 235, 0.39), rgb(73, 203, 255)), url(https://i.redd.it/hoirb84gvic31.png);
+ }
