@@ -9,10 +9,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <% if session[:user_id] != nil || session[:developer_id] != nil %>
-  <span><%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+  <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
   <input type=submit value='logout'>
-<% end %></span>
 <% end %>
+<% end %>
+<span><%= link_to "Analytics", analytics_path %></span>
 
 
 

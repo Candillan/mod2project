@@ -57,5 +57,8 @@ Rails.application.routes.draw do
   get '/login', to: "sessions#new", as: "login"
   post '/login', to: "sessions#create"
   post '/logout', to: "sessions#destroy"
+
+  #Analytics Route
+  get '/analytics', to: "analytics#index", as: "analytics"
  
 end

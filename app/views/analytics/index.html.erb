@@ -1,0 +1,34 @@
+<%= link_to "Log In", login_path %>
+
+<h1>Analytics</h1>
+
+<h2>Game Data</h2>
+
+<p><strong>Total Number of Games: </strong><%= @games.total_games %></p>
+
+<p><strong>Highest Rated Game: </strong><%= "#{@games.highest_rated_game.name} - #{@games.highest_rated_game.weighted_review}/10" %></p>
+
+<p><strong>Most Reviewed Game: </strong><%= "#{@games.most_reviewed_game.name} - #{@games.most_reviewed_game.reviews.count} reviews" %></p>
+
+
+<h2>Review Data</h2>
+
+<p><strong>Average Review Rating: </strong><%= @reviews.average_review_rating_raw %></p>
+<p><strong>Total Number of Reviews: </strong><%= @reviews.all_reviews %></p>
+
+<h2>Developer Data</h2>
+
+
+
+
+
+
+
+
+<h3><marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
+  <marquee behavior="alternate">
+    Happy Birthday Matt
+  </marquee>
+</marquee><h3>
+
+<h5>Calvin, Ben, Jake</h5>

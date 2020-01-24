@@ -25,4 +25,8 @@ class Review < ApplicationRecord
         (running_total / my_arr.length).to_f
     end
 
+    def self.all_reviews
+        Review.all.count
+    end 
+
 end

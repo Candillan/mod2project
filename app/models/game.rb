@@ -68,6 +68,11 @@ class Game < ApplicationRecord
     end
 
     #methods that could be used for analytics
+    def self.total_games
+        Game.all.count
+    end 
+    
+
     def self.highest_rated_game
         Game.all.max_by do |game|
             game.weighted_review
