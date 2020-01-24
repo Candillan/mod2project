@@ -12,11 +12,15 @@
 
 
 <h2>Review Data</h2>
-
-<p><strong>Average Review Rating: </strong><%= @reviews.average_review_rating_raw %></p>
 <p><strong>Total Number of Reviews: </strong><%= @reviews.all_reviews %></p>
 
+<p><strong>Average Review Rating: </strong><%= @reviews.average_review_rating_raw %></p>
+
 <h2>Developer Data</h2>
+
+<p><strong>Total Number of Developers: </strong><%= @developers.total_devs %></p>
+<p><strong>Oldest Developer: </strong><%= @developers.oldest_dev.username %></p>
+<p><strong>Most Experienced Developer: </strong><%= "#{@developers.most_experienced_dev.username} - #{@developers.most_experienced_dev.experience} years" %></p>
 
 
 
