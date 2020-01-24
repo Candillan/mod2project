@@ -6,7 +6,7 @@
 <p>Developed by: <%= link_to @developer.username, developer_path(@developer) %></p>
 
 
-<p> Weighted Average: <%= @game.weighted_review %></p>
+<p> Weighted Average: <%= @game.weighted_review.round(2) %></p>
 
 <ul>
     <% @game.reviews.each do |review| %>
@@ -22,6 +22,9 @@
     <% end %>
 </ul>
 
+<% if session[:user_id] %>
 <%= button_to "New Review", new_review_path, method: :get %><br>
+<% end %>
+
 <%= button_to "All Games", games_path, method: :get %>
 
