@@ -11,4 +11,18 @@ class Review < ApplicationRecord
             errors.add(:rating, "must be on a scale from 0-10")
         end
     end
+
+    #methods that could be used for analytics
+
+    #just gets all ratings and averages it
+
+    def self.average_review_rating_raw 
+        my_arr = Review.all.pluck(:rating)
+        running_total = 0
+        my_arr.each do |num|
+            running_total += num
+        end 
+        (running_total / my_arr.length).to_f
+    end
+
 end

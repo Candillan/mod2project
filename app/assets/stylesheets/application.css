@@ -20,3 +20,13 @@
      background-position: center;
      background-image: linear-gradient(rgba(223, 223, 235, 0.39), rgb(73, 203, 255)), url(https://i.redd.it/hoirb84gvic31.png);
  }
+ a:link{
+     color:black;
+ }
+ a:visited{
+     color:black;
+ }
+ a:hover{
+     color:white;
+     background:black;
+ }
